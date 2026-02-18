@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #030311;
+  /* Extracted Deep Blue from hero.png */
+  --foreground: #e0e7ff;
+  /* Cool white for better contrast on blue */
+
+  --primary: #f97316;
+  /* Keeping Fire/Orange for contrast */
+  --primary-foreground: #ffffff;
+
+  --secondary: #a2ace9;
+  /* Extracted Ice/Periwinkle from hero.png */
+  --secondary-foreground: #030311;
+
+  --card: #0d1743;
+  /* Extracted Dark Blue for surfaces */
+  --card-foreground: #e0e7ff;
+
+  --popover: #0d1743;
+  --popover-foreground: #e0e7ff;
+
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+
+  --accent: #223c85;
+  /* Extracted Medium Blue */
+  --accent-foreground: #ffffff;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: #223c85;
+  /* Using medium blue for borders to blend */
+  --input: #1e293b;
+  --ring: #f97316;
+  /* Orange ring for focus */
+
+  --radius: 0.75rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }

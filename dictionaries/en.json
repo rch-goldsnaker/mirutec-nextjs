@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "items": {
+        "services": "Services",
+        "technology": "Technology",
+        "about": "About Us",
+        "contact": "Contact"
+    },
+    "cta": "Get a Quote"
+  },
+  "hero": {
+    "badge": "Digital Revolution",
+    "title_prefix": "Building Solutions",
+    "title_highlight": "Without Limits",
+    "description": "Custom software development, artificial intelligence, and workflow automation. We turn your ideas into <span className=\"text-white font-bold\">scalable</span> and <span className=\"text-white font-bold\">efficient</span> realities.",
+    "cta_primary": "View Services",
+    "cta_secondary": "Book a Call"
+  },
+  "services": {
+    "title_prefix": "Our",
+    "title_highlight": "Services",
+    "description": "Comprehensive technological solutions to empower every aspect of your business.",
+    "items": [
+      {
+        "title": "App Development",
+        "description": "Modern, fast, and secure web and mobile applications using the latest technologies."
+      },
+      {
+        "title": "AI Agents",
+        "description": "Implementation of LLMs and autonomous agents for customer support and data analysis."
+      },
+      {
+         "title": "n8n Automation",
+         "description": "Optimization of business workflows connecting your favorite tools seamlessly."
+      },
+      {
+         "title": "IoT Solutions",
+         "description": "Intelligent hardware-to-cloud connectivity, real-time monitoring, and embedded firmware."
+      },
+      {
+        "title": "Cloud Consulting",
+        "description": "Scalable architectures on AWS/Azure to support massive growth and high availability."
+      },
+      {
+        "title": "System Integration",
+        "description": "We unify your platforms (CRM, ERP, Databases) into a coherent digital ecosystem."
+      }
+    ]
+  },
+  "techConnect": {
+    "title": "POWERED BY WORLD-CLASS TECHNOLOGY"
+  },
+  "contact": {
+      "title_prefix": "Ready to",
+      "title_highlight": "innovate?",
+      "description": "Tell us about your project. Our engineering team will analyze your requirements and design a tailored solution.",
+      "support": "Global Support 24/7",
+      "nda": "NDA Guaranteed",
+      "form": {
+          "name": "Name",
+          "email": "Email",
+          "message": "Message",
+          "name_placeholder": "John Doe",
+          "email_placeholder": "john@company.com",
+          "message_placeholder": "Project details...",
+          "submit": "Send Message"
+      }
+  },
+  "footer": {
+      "rights": "Mirutec",
+      "tagline": "Designed for the Future."
+  }
+}

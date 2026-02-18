@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "items": {
+        "services": "Servicios",
+        "technology": "Tecnología",
+        "about": "Nosotros",
+        "contact": "Contacto"
+    },
+    "cta": "Cotizar Proyecto"
+  },
+  "hero": {
+    "badge": "Revolución Digital",
+    "title_prefix": "Creando soluciones",
+    "title_highlight": "Sin Límites",
+    "description": "Desarrollo de software a medida, inteligencia artificial y automatización de flujos de trabajo. Transformamos tus ideas en realidades <span className=\"text-white font-bold\">escalables</span> y <span className=\"text-white font-bold\">eficientes</span>.",
+    "cta_primary": "Ver Servicios",
+    "cta_secondary": "Agendar Llamada"
+  },
+  "services": {
+    "title_prefix": "Nuestros",
+    "title_highlight": "Servicios",
+    "description": "Soluciones tecnológicas integrales para potenciar cada aspecto de tu negocio.",
+    "items": [
+      {
+        "title": "Desarrollo de Apps",
+        "description": "Aplicaciones web y móviles modernas, rápidas y seguras utilizando las últimas tecnologías."
+      },
+      {
+        "title": "Agentes de IA",
+        "description": "Implementación de LLMs y agentes autónomos para atención al cliente y análisis de datos."
+      },
+      {
+         "title": "Automatización n8n",
+         "description": "Optimización de flujos de trabajo empresariales conectando tus herramientas favoritas sin fricción."
+      },
+      {
+         "title": "Soluciones IoT",
+         "description": "Conectividad inteligente de hardware a nube, monitoreo en tiempo real y firmware embebido."
+      },
+      {
+        "title": "Consultoría Cloud",
+        "description": "Arquitecturas escalables en AWS/Azure para soportar crecimiento masivo y alta disponibilidad."
+      },
+      {
+        "title": "Integración de Sistemas",
+        "description": "Unificamos tus plataformas (CRM, ERP, Bases de Datos) en un ecosistema digital coherente."
+      }
+    ]
+  },
+  "techConnect": {
+    "title": "POTENCIADO POR TECNOLOGÍA DE CLASE MUNDIAL"
+  },
+  "contact": {
+      "title_prefix": "¿Listo para",
+      "title_highlight": "innovar?",
+      "description": "Cuéntanos sobre tu proyecto. Nuestro equipo de ingeniería analizará tus requerimientos y diseñará una solución a medida.",
+      "support": "Soporte Global 24/7",
+      "nda": "NDA Garantizado",
+      "form": {
+          "name": "Nombre",
+          "email": "Email",
+          "message": "Mensaje",
+          "name_placeholder": "John Doe",
+          "email_placeholder": "john@company.com",
+          "message_placeholder": "Detalles del proyecto...",
+          "submit": "Enviar Mensaje"
+      }
+  },
+  "footer": {
+      "rights": "Mirutec",
+      "tagline": "Designed for the Future."
+  }
+}
