@@ -142,8 +142,14 @@ const Hero = ({ dict }: { dict: Dictionary }) => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/90" />
       </div>
 
-      {/* Decorative Grid on top of image but behind text */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay z-[1]"></div>
+      {/* Decorative Noise Overlay */}
+      <svg className="absolute inset-0 w-full h-full opacity-20 pointer-events-none mix-blend-overlay z-[1]" preserveAspectRatio="none">
+        <filter id="noise" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" seed="2"/>
+          <feColorMatrix in="noise" type="saturate" values="0"/>
+        </filter>
+        <rect width="100%" height="100%" fill="#ffffff" filter="url(#noise)"/>
+      </svg>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
