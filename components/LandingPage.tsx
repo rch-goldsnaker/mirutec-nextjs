@@ -52,18 +52,16 @@ const Navbar = ({ dict, lang }: { dict: Dictionary, lang: string }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0 flex items-center gap-3">
-              <motion.div
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.8, ease: "easeInOut" }}
-                className="relative w-10 h-10"
-              >
+              <div className="relative w-10 h-10">
                 <Image
                   src="/logo.png"
                   alt="Mirutec Logo"
                   fill
+                  sizes="40px"
+                  loading="eager"
                   className="object-contain drop-shadow-[0_0_15px_rgba(249,115,22,0.8)]"
                 />
-              </motion.div>
+              </div>
               <span className="font-bold text-2xl tracking-tighter text-white">
                 MIRUTEC
               </span>
@@ -83,13 +81,14 @@ const Navbar = ({ dict, lang }: { dict: Dictionary, lang: string }) => {
                   {lang.toUpperCase()}
                 </button>
 
-                <motion.button
+                <motion.a
+                  href="#contact"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-[0_0_20px_rgba(249,115,22,0.4)] hover:shadow-[0_0_30px_rgba(249,115,22,0.6)] transition-all border border-white/10"
+                  className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-[0_0_20px_rgba(249,115,22,0.4)] hover:shadow-[0_0_30px_rgba(249,115,22,0.6)] transition-all border border-white/10 inline-block"
                 >
                   {dict.nav.cta}
-                </motion.button>
+                </motion.a>
               </div>
             </div>
             <div className="-mr-2 flex md:hidden">
@@ -135,7 +134,8 @@ const Hero = ({ dict }: { dict: Dictionary }) => {
           src="/hero.png"
           alt="IoT Background"
           fill
-          className="object-cover opacity-60"
+          sizes="100vw"
+          className="object-contain opacity-60"
           priority
         />
         {/* Gradient Overlay for Readability */}
@@ -188,22 +188,24 @@ const Hero = ({ dict }: { dict: Dictionary }) => {
           />
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <motion.button
+            <motion.a
+              href="#services"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative px-8 py-4 bg-white text-black rounded-full font-bold text-lg transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_rgba(255,255,255,0.5)] overflow-hidden"
+              className="group relative px-8 py-4 bg-white text-black rounded-full font-bold text-lg transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_rgba(255,255,255,0.5)] overflow-hidden inline-block"
             >
               <span className="relative z-10 flex items-center gap-2">{dict.hero.cta_primary} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></span>
               <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-10 transition-opacity" />
-            </motion.button>
+            </motion.a>
 
-            <motion.button
+            <motion.a
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-black/30 border border-white/20 hover:border-white/40 text-white rounded-full font-bold text-lg transition-all backdrop-blur-md"
+              className="px-8 py-4 bg-black/30 border border-white/20 hover:border-white/40 text-white rounded-full font-bold text-lg transition-all backdrop-blur-md inline-block"
             >
               {dict.hero.cta_secondary}
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
       </div>
@@ -270,7 +272,7 @@ const Services = ({ dict }: { dict: Dictionary }) => {
 
 const TechStack = ({ dict }: { dict: Dictionary }) => {
   return (
-    <section className="py-24 border-y border-white/5 bg-white/[0.02] overflow-hidden">
+    <section id="technology" className="py-24 border-y border-white/5 bg-white/[0.02] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0 }}
@@ -283,7 +285,7 @@ const TechStack = ({ dict }: { dict: Dictionary }) => {
 
         <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 items-center opacity-80">
           {/* Text placeholders for logos with heavy styling */}
-          {["Next.js", "React Native", "OpenAI", "n8n", "AWS", "Python", "Kubernetes", "Terraform"].map((tech, i) => (
+          {["Next.js",".NET", "React Native", "OpenAI", "n8n", "AWS","Azure","GCP","Docker", "Kubernetes","PostgreSQL","Thingsboard","Tago.IO"].map((tech, i) => (
             <motion.span
               key={tech}
               initial={{ opacity: 0, y: 10 }}
@@ -339,22 +341,23 @@ const Contact = ({ dict }: { dict: Dictionary }) => {
               </div>
             </div>
 
-            <form className="space-y-5">
+            <form action="mailto:rch.goldsnaker@gmail.com" method="POST" encType="text/plain" className="space-y-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-500 ml-1">{dict.contact.form.name}</label>
-                  <input type="text" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary focus:bg-white/10 transition-all placeholder:text-gray-600" placeholder={dict.contact.form.name_placeholder} />
+                  <input type="text" name="name" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary focus:bg-white/10 transition-all placeholder:text-gray-600" placeholder={dict.contact.form.name_placeholder} />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-500 ml-1">{dict.contact.form.email}</label>
-                  <input type="email" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary focus:bg-white/10 transition-all placeholder:text-gray-600" placeholder={dict.contact.form.email_placeholder} />
+                  <input type="email" name="email" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary focus:bg-white/10 transition-all placeholder:text-gray-600" placeholder={dict.contact.form.email_placeholder} />
                 </div>
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-500 ml-1">{dict.contact.form.message}</label>
-                <textarea rows={4} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary focus:bg-white/10 transition-all placeholder:text-gray-600 resize-none" placeholder={dict.contact.form.message_placeholder} />
+                <textarea rows={4} name="message" required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary focus:bg-white/10 transition-all placeholder:text-gray-600 resize-none" placeholder={dict.contact.form.message_placeholder} />
               </div>
               <motion.button
+                type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-gradient-to-r from-primary to-red-600 hover:from-primary/80 hover:to-red-600/80 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-primary/20"
@@ -382,7 +385,8 @@ const Footer = ({ dict }: { dict: Dictionary }) => {
         </div>
 
         <div className="flex gap-6">
-          <a href="#" className="text-gray-500 hover:text-white transition-colors transform hover:-translate-y-1 inline-block">LinkedIn</a>
+          <a href="https://www.youtube.com/@mirutec" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors transform hover:-translate-y-1 inline-block">YouTube</a>
+          <a href="https://www.linkedin.com/in/roger-chung-445170b9/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors transform hover:-translate-y-1 inline-block">LinkedIn</a>
         </div>
       </div>
     </footer>

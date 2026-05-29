@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mirutec | IoT Solutions",
+  title: "Mirutec",
   description: "Revolucionando el Internet de las Cosas",
   icons: {
     icon: [
